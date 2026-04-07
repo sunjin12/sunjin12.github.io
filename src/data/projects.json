@@ -1,5 +1,13 @@
 {
   "pageTitle": "Projects — 길철휘",
   "sectionTitle": "Projects",
-  "projects": []
+  "projects": [
+    {
+      "title": "RAG Chat Project",
+      "description": "Retrieval-Augmented Generation 기반의 AI 채팅 애플리케이션 — 사용자가 직접 AI 페르소나를 생성하고 문서를 업로드하여 질의응답(Q&A)을 할 수 있는 풀스택 프로젝트",
+      "githubUrl": "https://github.com/sunjin12/rag_project",
+      "readmeFile": "rag-project",
+      "images": []
+    }
+  ]
 }

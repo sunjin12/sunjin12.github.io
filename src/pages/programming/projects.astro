@@ -1,6 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import data from '../../data/projects.json';
+
+const markdownFiles = import.meta.glob('../../data/projects/*.md', { eager: true });
+const readmeMap: Record<string, any> = {};
+for (const [path, mod] of Object.entries(markdownFiles)) {
+  const slug = path.split('/').pop()?.replace('.md', '') || '';
+  readmeMap[slug] = mod;
+}
 ---
 
 <BaseLayout title={data.pageTitle}>
@@ -10,27 +17,39 @@ import data from '../../data/projects.json';
     {data.projects.length === 0 ? (
       <p style="color: var(--color-text-muted);">프로젝트가 곧 추가될 예정입니다.</p>
     ) : (
-      data.projects.map(project => (
-        <div class="stat-block">
-          <h3>
-            {project.title}
-            {project.githubUrl && (
-              <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" style="font-size:0.85rem; margin-left:0.5rem;">
-                GitHub ↗
-              </a>
-            )}
-          </h3>
-          {project.description && <p>{project.description}</p>}
-          {project.readme && <div class="project-readme" set:html={project.readme} />}
-          {project.images && project.images.length > 0 && (
-            <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-top:1rem;">
-              {project.images.map(img => (
-                <img src={img.src} alt={img.alt} style="max-width:400px;" />
-              ))}
+      data.projects.map(project => {
+        const ReadmeContent = project.readmeFile && readmeMap[project.readmeFile]?.Content;
+        return (
+          <article class="project-card">
+            <div class="project-header">
+              <h3>{project.title}</h3>
+              {project.githubUrl && (
+                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" class="github-link">
+                  GitHub ↗
+                </a>
+              )}
             </div>
-          )}
-        </div>
-      ))
+            {project.description && <p class="project-desc">{project.description}</p>}
+
+            {project.images && project.images.length > 0 && (
+              <div class="project-images">
+                {project.images.map(img => (
+                  <img src={img.src} alt={img.alt} />
+                ))}
+              </div>
+            )}
+
+            {ReadmeContent && (
+              <details class="project-readme-toggle" open>
+                <summary>README.md</summary>
+                <div class="project-readme">
+                  <ReadmeContent />
+                </div>
+              </details>
+            )}
+          </article>
+        );
+      })
     )}
   </section>
 </BaseLayout>

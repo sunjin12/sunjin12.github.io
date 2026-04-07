@@ -83,7 +83,7 @@ collections:
               - { label: "제목", name: "title", widget: "string" }
               - { label: "설명", name: "description", widget: "string", required: false }
               - { label: "GitHub URL", name: "githubUrl", widget: "string", required: false }
-              - { label: "README (HTML)", name: "readme", widget: "text", required: false, hint: "프로젝트 개요 (HTML 지원)" }
+              - { label: "README 파일 (slug)", name: "readmeFile", widget: "string", required: false, hint: "src/data/projects/ 폴더의 .md 파일명 (확장자 제외)" }
               - label: "이미지"
                 name: "images"
                 widget: "list"
