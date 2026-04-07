@@ -1,3 +1,6 @@
+# CV 페이지 관리 프로젝트
+주소: https://sunjin12.github.io/
+
 # Astro Starter Kit: Minimal
 
 ```sh
