@@ -1,0 +1,28 @@
+{
+  "pageTitle": "Programming — 길철휘",
+  "sectionTitle": "코딩 테스트",
+  "statBlocks": [
+    {
+      "title": "백준 Online Judge",
+      "titleBadge": "Platinum 5",
+      "statPrefix": "총",
+      "statHighlight": "363문제",
+      "statSuffix": "풀이",
+      "badges": [],
+      "details": "",
+      "image": "/assets/images/baekjoon.png",
+      "imageAlt": "백준 온라인 저지 활동 기록"
+    },
+    {
+      "title": "LeetCode",
+      "titleBadge": "",
+      "statPrefix": "총",
+      "statHighlight": "342문제",
+      "statSuffix": "풀이",
+      "badges": ["Easy 145", "Medium 174", "Hard 23"],
+      "details": "Acceptance Rate: 69.4% · Beats 97.8%",
+      "image": "/assets/images/leetcode.png",
+      "imageAlt": "LeetCode 문제 풀이 통계"
+    }
+  ]
+}

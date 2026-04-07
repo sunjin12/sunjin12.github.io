@@ -1,0 +1,46 @@
+{
+  "pageTitle": "영어 — 길철휘",
+  "sectionTitle": "영어",
+  "certifications": [
+    {
+      "title": "TOEIC",
+      "score": "940",
+      "type": "pdf",
+      "filePath": "/assets/pdf/toeic-score.pdf",
+      "downloadLabel": "다운로드",
+      "imageAlt": ""
+    },
+    {
+      "title": "토익스피킹",
+      "score": "Level 6 — 130",
+      "type": "pdf",
+      "filePath": "/assets/pdf/toeic-speaking-score.pdf",
+      "downloadLabel": "다운로드",
+      "imageAlt": ""
+    },
+    {
+      "title": "토익스피킹",
+      "score": "IH — 140",
+      "type": "image",
+      "filePath": "/assets/images/toeic-speaking-ih.png",
+      "downloadLabel": "",
+      "imageAlt": "토익스피킹 IH 140점 성적"
+    }
+  ],
+  "learningRecords": [
+    {
+      "title": "말해보카 — 영어단어/리스닝",
+      "description": "",
+      "hours": "483시간",
+      "image": "/assets/images/malhaeboca.png",
+      "imageAlt": "말해보카 학습 기록"
+    },
+    {
+      "title": "듀오링고",
+      "description": "영어/일본어/스페인어/중국어",
+      "hours": "400시간 이상",
+      "image": "/assets/images/duolingo.png",
+      "imageAlt": "듀오링고 프로필"
+    }
+  ]
+}

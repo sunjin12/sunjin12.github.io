@@ -1,0 +1,20 @@
+{
+  "pageTitle": "일본어 — 길철휘",
+  "sectionTitle": "일본어",
+  "certifications": [
+    {
+      "title": "JLPT",
+      "score": "N3",
+      "pdfs": [
+        {
+          "label": "합격증 다운로드",
+          "path": "/assets/pdf/jlpt-n3-certificate.pdf"
+        },
+        {
+          "label": "결과지 다운로드",
+          "path": "/assets/pdf/jlpt-n3-result.pdf"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+backend:
+  name: github
+  repo: sunjin12/sunjin12.github.io
+  branch: main
+  # OAuth proxy URL — Cloudflare Worker 배포 후 아래 주소를 수정하세요
+  base_url: https://sunjin12-cms-auth.ck-cv.workers.dev
+  auth_endpoint: /auth
+
+media_folder: "public/assets/images"
+public_folder: "/assets/images"
+
+locale: "ko"
+
+collections:
+  - name: "pages"
+    label: "페이지"
+    files:
+      # ───────── 홈페이지 ─────────
+      - label: "홈페이지"
+        name: "home"
+        file: "src/data/home.json"
+        fields:
+          - { label: "페이지 제목", name: "pageTitle", widget: "string" }
+          - label: "히어로"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "이미지 URL", name: "image", widget: "string" }
+              - { label: "이미지 설명", name: "imageAlt", widget: "string" }
+              - { label: "제목", name: "title", widget: "string" }
+              - label: "설명"
+                name: "descriptions"
+                widget: "list"
+                field: { label: "설명 항목", name: "item", widget: "string" }
+              - { label: "이메일", name: "email", widget: "string" }
+          - label: "경력"
+            name: "career"
+            widget: "list"
+            fields:
+              - { label: "내용", name: "text", widget: "string" }
+          - label: "카드"
+            name: "cards"
+            widget: "list"
+            fields:
+              - { label: "아이콘", name: "icon", widget: "string" }
+              - { label: "제목", name: "title", widget: "string" }
+              - { label: "요약", name: "summary", widget: "string" }
+              - { label: "링크", name: "link", widget: "string" }
+          - label: "논문"
+            name: "papers"
+            widget: "list"
+            fields:
+              - { label: "제목", name: "title", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+
+      # ───────── 프로그래밍 ─────────
+      - label: "프로그래밍"
+        name: "programming"
+        file: "src/data/programming.json"
+        fields:
+          - { label: "페이지 제목", name: "pageTitle", widget: "string" }
+          - { label: "섹션 제목", name: "sectionTitle", widget: "string" }
+          - label: "통계 블록"
+            name: "statBlocks"
+            widget: "list"
+            fields:
+              - { label: "제목", name: "title", widget: "string" }
+              - { label: "제목 뱃지", name: "titleBadge", widget: "string", required: false }
+              - { label: "통계 접두사", name: "statPrefix", widget: "string" }
+              - { label: "통계 강조", name: "statHighlight", widget: "string" }
+              - { label: "통계 접미사", name: "statSuffix", widget: "string" }
+              - label: "뱃지"
+                name: "badges"
+                widget: "list"
+                required: false
+                field: { label: "뱃지", name: "badge", widget: "string" }
+              - { label: "상세 내용", name: "details", widget: "string", required: false }
+              - { label: "이미지", name: "image", widget: "image" }
+              - { label: "이미지 설명", name: "imageAlt", widget: "string" }
+
+      # ───────── 언어 목록 ─────────
+      - label: "언어 목록"
+        name: "language-index"
+        file: "src/data/language-index.json"
+        fields:
+          - { label: "페이지 제목", name: "pageTitle", widget: "string" }
+          - { label: "섹션 제목", name: "sectionTitle", widget: "string" }
+          - label: "카드"
+            name: "cards"
+            widget: "list"
+            fields:
+              - { label: "아이콘", name: "icon", widget: "string" }
+              - { label: "제목", name: "title", widget: "string" }
+              - { label: "요약", name: "summary", widget: "string" }
+              - { label: "링크", name: "link", widget: "string" }
+
+      # ───────── 영어 ─────────
+      - label: "영어"
+        name: "english"
+        file: "src/data/english.json"
+        fields:
+          - { label: "페이지 제목", name: "pageTitle", widget: "string" }
+          - { label: "섹션 제목", name: "sectionTitle", widget: "string" }
+          - label: "자격증"
+            name: "certifications"
+            widget: "list"
+            fields:
+              - { label: "제목", name: "title", widget: "string" }
+              - { label: "점수", name: "score", widget: "string" }
+              - label: "유형"
+                name: "type"
+                widget: "select"
+                options: ["pdf", "image"]
+              - { label: "파일 경로", name: "filePath", widget: "string", hint: "예: /assets/pdf/파일명.pdf 또는 /assets/images/파일명.png" }
+              - { label: "다운로드 라벨", name: "downloadLabel", widget: "string", required: false }
+              - { label: "이미지 설명", name: "imageAlt", widget: "string", required: false }
+          - label: "학습 이력"
+            name: "learningRecords"
+            widget: "list"
+            fields:
+              - { label: "제목", name: "title", widget: "string" }
+              - { label: "설명", name: "description", widget: "string", required: false }
+              - { label: "학습 시간", name: "hours", widget: "string" }
+              - { label: "이미지", name: "image", widget: "image" }
+              - { label: "이미지 설명", name: "imageAlt", widget: "string" }
+
+      # ───────── 일본어 ─────────
+      - label: "일본어"
+        name: "japanese"
+        file: "src/data/japanese.json"
+        fields:
+          - { label: "페이지 제목", name: "pageTitle", widget: "string" }
+          - { label: "섹션 제목", name: "sectionTitle", widget: "string" }
+          - label: "자격증"
+            name: "certifications"
+            widget: "list"
+            fields:
+              - { label: "제목", name: "title", widget: "string" }
+              - { label: "점수/레벨", name: "score", widget: "string" }
+              - label: "PDF 파일"
+                name: "pdfs"
+                widget: "list"
+                fields:
+                  - { label: "라벨", name: "label", widget: "string" }
+                  - { label: "경로", name: "path", widget: "string", hint: "예: /assets/pdf/파일명.pdf" }

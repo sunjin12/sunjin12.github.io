@@ -1,0 +1,42 @@
+{
+  "pageTitle": "포트폴리오 — 길철휘",
+  "hero": {
+    "image": "https://images.unsplash.com/photo-1609242785289-a53f498a8a8d?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
+    "imageAlt": "히어로 이미지",
+    "title": "프로그래머 길철휘입니다",
+    "descriptions": [
+      "기술, 과학, 독서를 좋아합니다",
+      "개인의 창조력을 발휘하도록 도와주는 프로젝트를 하고 있습니다"
+    ],
+    "email": "sunjin12333@gmail.com"
+  },
+  "career": [
+    { "text": "경기북과학고등학교 졸업" },
+    { "text": "성균관대학교 소프트웨어학과 학사 졸업" },
+    { "text": "성균관대학교 소프트웨어학과 석사 수료" }
+  ],
+  "cards": [
+    {
+      "icon": "💻",
+      "title": "Programming",
+      "summary": "코딩 테스트 — 백준 Platinum 5, LeetCode 342문제",
+      "link": "/programming"
+    },
+    {
+      "icon": "🌐",
+      "title": "Language",
+      "summary": "영어 (TOEIC 940) · 일본어 (JLPT N3)",
+      "link": "/language"
+    }
+  ],
+  "papers": [
+    {
+      "title": "황반 이미지 생성을 위한 GAN과 STN을 결합한 영상 변환",
+      "url": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE09874553"
+    },
+    {
+      "title": "GAN을 활용한 광각안저 사진의 황반 이미지 복원",
+      "url": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE09301674"
+    }
+  ]
+}

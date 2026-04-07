@@ -1,0 +1,18 @@
+{
+  "pageTitle": "Language — 길철휘",
+  "sectionTitle": "Language",
+  "cards": [
+    {
+      "icon": "🇺🇸",
+      "title": "영어",
+      "summary": "TOEIC 940 · 토익스피킹 IH · 말해보카 483시간 · 듀오링고 400시간+",
+      "link": "/language/english"
+    },
+    {
+      "icon": "🇯🇵",
+      "title": "일본어",
+      "summary": "JLPT N3",
+      "link": "/language/japanese"
+    }
+  ]
+}
