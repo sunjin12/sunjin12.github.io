@@ -3,26 +3,37 @@
   "sectionTitle": "코딩 테스트",
   "statBlocks": [
     {
-      "title": "백준 Online Judge",
-      "titleBadge": "Platinum 5",
-      "statPrefix": "총",
       "statHighlight": "363문제",
-      "statSuffix": "풀이",
-      "badges": [],
       "details": "",
-      "image": "/assets/images/baekjoon.png",
-      "imageAlt": "백준 온라인 저지 활동 기록"
+      "statSuffix": "풀이",
+      "statPrefix": "총",
+      "titleBadge": "Platinum 5",
+      "imageAlt": "백준 온라인 저지 활동 기록",
+      "badges": [],
+      "title": "백준 Online Judge",
+      "image": "/assets/images/baekjoon.png"
     },
     {
-      "title": "LeetCode",
-      "titleBadge": "",
-      "statPrefix": "총",
       "statHighlight": "342문제",
-      "statSuffix": "풀이",
-      "badges": ["Easy 145", "Medium 174", "Hard 23"],
       "details": "Acceptance Rate: 69.4% · Beats 97.8%",
-      "image": "/assets/images/leetcode.png",
-      "imageAlt": "LeetCode 문제 풀이 통계"
+      "statSuffix": "풀이",
+      "statPrefix": "총",
+      "titleBadge": "",
+      "imageAlt": "LeetCode 문제 풀이 통계",
+      "badges": [
+        "Easy 145",
+        "Medium 174",
+        "Hard 23"
+      ],
+      "title": "LeetCode",
+      "image": "/assets/images/leetcode.png"
+    },
+    {
+      "title": "CodeTree",
+      "details": "2026년 3월 29부터 코드트리 문제풀이 시작",
+      "badges": [
+        "https://github.com/sunjin12/CodeTree"
+      ]
     }
   ]
 }
