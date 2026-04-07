@@ -30,10 +30,13 @@
     },
     {
       "title": "CodeTree",
-      "details": "2026년 3월 29부터 코드트리 문제풀이 시작",
-      "badges": [
-        "https://github.com/sunjin12/CodeTree"
-      ]
+      "details": "https://github.com/sunjin12/CodeTree",
+      "badges": [],
+      "statPrefix": "2026년 3월 29부터",
+      "statHighlight": "코드트리 문제풀이",
+      "statSuffix": "시작",
+      "image": "https://github.com/sunjin12/CodeTree",
+      "imageAlt": "https://github.com/sunjin12/CodeTree URL 이미지"
     }
   ]
 }
