@@ -1,0 +1,7 @@
+name = "sunjin12-cms-auth"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# CLIENT_ID와 CLIENT_SECRET은 wrangler secret으로 설정하세요:
+#   wrangler secret put CLIENT_ID
+#   wrangler secret put CLIENT_SECRET
