@@ -53,10 +53,49 @@ collections:
               - { label: "제목", name: "title", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
 
-      # ───────── 프로그래밍 ─────────
-      - label: "프로그래밍"
-        name: "programming"
-        file: "src/data/programming.json"
+      # ───────── 프로그래밍 목록 ─────────
+      - label: "프로그래밍 목록"
+        name: "programming-index"
+        file: "src/data/programming-index.json"
+        fields:
+          - { label: "페이지 제목", name: "pageTitle", widget: "string" }
+          - { label: "섹션 제목", name: "sectionTitle", widget: "string" }
+          - label: "카드"
+            name: "cards"
+            widget: "list"
+            fields:
+              - { label: "아이콘", name: "icon", widget: "string" }
+              - { label: "제목", name: "title", widget: "string" }
+              - { label: "요약", name: "summary", widget: "string" }
+              - { label: "링크", name: "link", widget: "string" }
+
+      # ───────── 프로젝트 ─────────
+      - label: "프로젝트"
+        name: "projects"
+        file: "src/data/projects.json"
+        fields:
+          - { label: "페이지 제목", name: "pageTitle", widget: "string" }
+          - { label: "섹션 제목", name: "sectionTitle", widget: "string" }
+          - label: "프로젝트"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "제목", name: "title", widget: "string" }
+              - { label: "설명", name: "description", widget: "string", required: false }
+              - { label: "GitHub URL", name: "githubUrl", widget: "string", required: false }
+              - { label: "README (HTML)", name: "readme", widget: "text", required: false, hint: "프로젝트 개요 (HTML 지원)" }
+              - label: "이미지"
+                name: "images"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "이미지", name: "src", widget: "image" }
+                  - { label: "설명", name: "alt", widget: "string" }
+
+      # ───────── 코딩 테스트 ─────────
+      - label: "코딩 테스트"
+        name: "coding-test"
+        file: "src/data/coding-test.json"
         fields:
           - { label: "페이지 제목", name: "pageTitle", widget: "string" }
           - { label: "섹션 제목", name: "sectionTitle", widget: "string" }

@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import data from '../../data/programming-index.json';
+---
+
+<BaseLayout title={data.pageTitle}>
+  <section class="section">
+    <h2 class="section-title">{data.sectionTitle}</h2>
+    <div class="card-grid">
+      {data.cards.map(card => (
+        <a href={card.link} class="card" style="text-decoration:none;color:inherit">
+          <h3>{card.icon} {card.title}</h3>
+          <p>{card.summary}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,18 @@
+{
+  "pageTitle": "Programming — 길철휘",
+  "sectionTitle": "Programming",
+  "cards": [
+    {
+      "icon": "🚀",
+      "title": "Projects",
+      "summary": "개인 프로젝트 모음",
+      "link": "/programming/projects"
+    },
+    {
+      "icon": "🧩",
+      "title": "Coding Test",
+      "summary": "백준 Platinum 5 · LeetCode 342문제",
+      "link": "/programming/coding-test"
+    }
+  ]
+}

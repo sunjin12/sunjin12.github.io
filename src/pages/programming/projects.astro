@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import data from '../../data/projects.json';
+---
+
+<BaseLayout title={data.pageTitle}>
+  <section class="section">
+    <h2 class="section-title">{data.sectionTitle}</h2>
+
+    {data.projects.length === 0 ? (
+      <p style="color: var(--color-text-muted);">프로젝트가 곧 추가될 예정입니다.</p>
+    ) : (
+      data.projects.map(project => (
+        <div class="stat-block">
+          <h3>
+            {project.title}
+            {project.githubUrl && (
+              <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" style="font-size:0.85rem; margin-left:0.5rem;">
+                GitHub ↗
+              </a>
+            )}
+          </h3>
+          {project.description && <p>{project.description}</p>}
+          {project.readme && <div class="project-readme" set:html={project.readme} />}
+          {project.images && project.images.length > 0 && (
+            <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-top:1rem;">
+              {project.images.map(img => (
+                <img src={img.src} alt={img.alt} style="max-width:400px;" />
+              ))}
+            </div>
+          )}
+        </div>
+      ))
+    )}
+  </section>
+</BaseLayout>
