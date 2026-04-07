@@ -11,13 +11,19 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <h4>JLPT</h4>
         <span class="score">N3</span>
       </div>
-      <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-        <a href="/assets/pdf/jlpt-n3-certificate.pdf" class="download-btn" download>
-          📄 합격증 PDF
-        </a>
-        <a href="/assets/pdf/jlpt-n3-result.pdf" class="download-btn" download>
-          📄 결과지 PDF
-        </a>
+      <div class="pdf-thumb-group">
+        <div class="pdf-thumb-wrap">
+          <iframe src="/assets/pdf/jlpt-n3-certificate.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" class="pdf-thumb-frame"></iframe>
+          <a href="/assets/pdf/jlpt-n3-certificate.pdf" class="pdf-thumb-overlay" download>
+            <span class="pdf-download-hint">📥 합격증 다운로드</span>
+          </a>
+        </div>
+        <div class="pdf-thumb-wrap">
+          <iframe src="/assets/pdf/jlpt-n3-result.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" class="pdf-thumb-frame"></iframe>
+          <a href="/assets/pdf/jlpt-n3-result.pdf" class="pdf-thumb-overlay" download>
+            <span class="pdf-download-hint">📥 결과지 다운로드</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>

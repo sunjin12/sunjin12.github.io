@@ -13,9 +13,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <h4>TOEIC</h4>
         <span class="score">940</span>
       </div>
-      <a href="/assets/pdf/toeic-score.pdf" class="download-btn" download>
-        📄 성적 확인서 PDF
-      </a>
+      <div class="pdf-thumb-wrap">
+        <iframe src="/assets/pdf/toeic-score.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" class="pdf-thumb-frame"></iframe>
+        <a href="/assets/pdf/toeic-score.pdf" class="pdf-thumb-overlay" download>
+          <span class="pdf-download-hint">📥 다운로드</span>
+        </a>
+      </div>
     </div>
 
     <div class="cert-item">
@@ -23,9 +26,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <h4>토익스피킹</h4>
         <span class="score">Level 6 — 130</span>
       </div>
-      <a href="/assets/pdf/toeic-speaking-score.pdf" class="download-btn" download>
-        📄 성적 확인서 PDF
-      </a>
+      <div class="pdf-thumb-wrap">
+        <iframe src="/assets/pdf/toeic-speaking-score.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" class="pdf-thumb-frame"></iframe>
+        <a href="/assets/pdf/toeic-speaking-score.pdf" class="pdf-thumb-overlay" download>
+          <span class="pdf-download-hint">📥 다운로드</span>
+        </a>
+      </div>
     </div>
 
     <div class="cert-item">
