@@ -35,8 +35,8 @@
       "statPrefix": "2026년 3월 29부터",
       "statHighlight": "코드트리 문제풀이",
       "statSuffix": "시작",
-      "image": "https://github.com/sunjin12/CodeTree",
-      "imageAlt": "https://github.com/sunjin12/CodeTree URL 이미지"
+      "image": "/assets/images/코드트리_트레일.png",
+      "imageAlt": "코드트리 트레일 이미지"
     }
   ]
 }
