@@ -1,13 +1,38 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import data from '../../data/projects.json';
+import { marked } from 'marked';
 
-const markdownFiles = import.meta.glob('../../data/projects/*.md', { eager: true });
-const readmeMap: Record<string, any> = {};
-for (const [path, mod] of Object.entries(markdownFiles)) {
-  const slug = path.split('/').pop()?.replace('.md', '') || '';
-  readmeMap[slug] = mod;
+// GitHub URL에서 README.md를 가져와 HTML로 변환
+async function fetchReadme(githubUrl: string): Promise<string | null> {
+  try {
+    // https://github.com/owner/repo → owner/repo
+    const match = githubUrl.match(/github\.com\/([^/]+\/[^/]+)/);
+    if (!match) return null;
+    const ownerRepo = match[1];
+    const rawUrl = `https://raw.githubusercontent.com/${ownerRepo}/main/README.md`;
+    const res = await fetch(rawUrl);
+    if (!res.ok) return null;
+    let md = await res.text();
+    // 상대 이미지 경로를 GitHub 절대 경로로 변환
+    md = md.replace(/!\[([^\]]*)\]\((?!https?:\/\/)([^)]+)\)/g,
+      `![$1](https://raw.githubusercontent.com/${ownerRepo}/main/$2)`);
+    return marked.parse(md) as string;
+  } catch {
+    return null;
+  }
 }
+
+// 모든 프로젝트의 README를 병렬로 가져오기
+const readmeHtmlMap: Record<string, string> = {};
+await Promise.all(
+  data.projects.map(async (project) => {
+    if (project.githubUrl) {
+      const html = await fetchReadme(project.githubUrl);
+      if (html) readmeHtmlMap[project.githubUrl] = html;
+    }
+  })
+);
 ---
 
 <BaseLayout title={data.pageTitle}>
@@ -17,8 +42,8 @@ for (const [path, mod] of Object.entries(markdownFiles)) {
     {data.projects.length === 0 ? (
       <p style="color: var(--color-text-muted);">프로젝트가 곧 추가될 예정입니다.</p>
     ) : (
-      data.projects.map(project => {
-        const ReadmeContent = project.readmeFile && readmeMap[project.readmeFile]?.Content;
+      [...data.projects].reverse().map(project => {
+        const readmeHtml = project.githubUrl && readmeHtmlMap[project.githubUrl];
         return (
           <article class="project-card">
             <div class="project-header">
@@ -33,18 +58,16 @@ for (const [path, mod] of Object.entries(markdownFiles)) {
 
             {project.images && project.images.length > 0 && (
               <div class="project-images">
-                {project.images.map(img => (
+                {project.images.map((img: { src: string; alt: string }) => (
                   <img src={img.src} alt={img.alt} />
                 ))}
               </div>
             )}
 
-            {ReadmeContent && (
+            {readmeHtml && (
               <details class="project-readme-toggle">
                 <summary>README.md</summary>
-                <div class="project-readme">
-                  <ReadmeContent />
-                </div>
+                <div class="project-readme" set:html={readmeHtml} />
               </details>
             )}
           </article>
