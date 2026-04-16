@@ -12,14 +12,6 @@
     },
     {
       "title": "토익스피킹",
-      "score": "Level 6 — 130",
-      "type": "pdf",
-      "filePath": "/assets/pdf/toeic-speaking-score.pdf",
-      "downloadLabel": "다운로드",
-      "imageAlt": ""
-    },
-    {
-      "title": "토익스피킹",
       "score": "IH — 140",
       "type": "image",
       "filePath": "/assets/images/toeic-speaking-ih.png",
