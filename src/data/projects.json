@@ -13,6 +13,11 @@
       "title": "SCP World",
       "description": "SCP Foundation 위키 콘텐츠를 RAG로 검색하고, 재단 페르소나(연구원/요원/SCP-079)로 답변하는 챗봇 데모. 100% 서버리스 (Cloud Run + Firebase Hosting + Firestore) 로 운영됩니다.",
       "githubUrl": "https://github.com/sunjin12/SCPWorld"
+    },
+    {
+      "title": "OSSMate",
+      "description": " OSS 메인테이너의 반복 업무를 Claude Code 플러그인과 독립 CLI로 자동화하는 프로젝트입니다.",
+      "githubUrl": "https://github.com/sunjin12/ossmate"
     }
   ]
 }
