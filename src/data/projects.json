@@ -18,6 +18,11 @@
       "title": "OSSMate",
       "description": " OSS 메인테이너의 반복 업무를 Claude Code 플러그인과 독립 CLI로 자동화하는 프로젝트입니다.",
       "githubUrl": "https://github.com/sunjin12/ossmate"
+    },
+    {
+      "title": "NotionToBlog",
+      "description": "Notion 일기 → Hugo 블로그 자동 발행 파이프라인",
+      "githubUrl": "https://github.com/sunjin12/NotionToBlog"
     }
   ]
 }
