@@ -23,6 +23,11 @@
       "title": "NotionToBlog",
       "description": "Notion 일기 → Hugo 블로그 자동 발행 파이프라인",
       "githubUrl": "https://github.com/sunjin12/NotionToBlog"
+    },
+    {
+      "githubUrl": "https://github.com/sunjin12/pageindex-gatsby-demo",
+      "title": "pageindex-demo",
+      "description": "PageIndex — vector DB 없이 문서의 챕터/섹션 구조를 트리 인덱스로 만들고 LLM 추론으로 트리를 탐색하는 retrieval 시스템"
     }
   ]
 }
