@@ -28,6 +28,11 @@
       "githubUrl": "https://github.com/sunjin12/pageindex-gatsby-demo",
       "title": "pageindex-demo",
       "description": "PageIndex — vector DB 없이 문서의 챕터/섹션 구조를 트리 인덱스로 만들고 LLM 추론으로 트리를 탐색하는 retrieval 시스템"
+    },
+    {
+      "title": "LangGraph AI 에세이 평가 루프",
+      "description": "LangChain과 LangGraph를 활용하여 사용자가 입력한 주제에 대한 AI 에세이 작성, 피드백, 그리고 순환 보완 교정을 수행하는 완전한 동작형 워크플로우 학습 예제입니다.",
+      "githubUrl": "https://github.com/sunjin12/Lang"
     }
   ]
 }
