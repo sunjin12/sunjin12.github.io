@@ -15,11 +15,6 @@
       "githubUrl": "https://github.com/sunjin12/SCPWorld"
     },
     {
-      "title": "OSSMate",
-      "description": " OSS 메인테이너의 반복 업무를 Claude Code 플러그인과 독립 CLI로 자동화하는 프로젝트입니다.",
-      "githubUrl": "https://github.com/sunjin12/ossmate"
-    },
-    {
       "title": "NotionToBlog",
       "description": "Notion 일기 → Hugo 블로그 자동 발행 파이프라인",
       "githubUrl": "https://github.com/sunjin12/NotionToBlog"
@@ -28,6 +23,16 @@
       "githubUrl": "https://github.com/sunjin12/pageindex-gatsby-demo",
       "title": "pageindex-demo",
       "description": "PageIndex — vector DB 없이 문서의 챕터/섹션 구조를 트리 인덱스로 만들고 LLM 추론으로 트리를 탐색하는 retrieval 시스템"
+    },
+    {
+      "title": "Cozy Campfire Sprite Animation",
+      "description": "마음을 차분하게 해주는 타닥타닥 모닥불 소리와 부드러운 픽셀 애니메이션을 감상할 수 있는 감성 웹 애플리케이션입니다.",
+      "githubUrl": "https://github.com/sunjin12/AnimationSprite"
+    },
+    {
+      "title": "Neon Beats: Cyberpunk Interactive Drum Pad",
+      "description": "인터랙티브 드럼 패드 학습용 프로젝트입니다. 사이버펑크 감성의 화려한 다크 네온 UI 테마 속에서 드럼을 연주할 수 있습니다.",
+      "githubUrl": "https://github.com/sunjin12/FrontendDemo"
     },
     {
       "title": "LangGraph AI 에세이 평가 루프",
