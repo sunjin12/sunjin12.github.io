@@ -38,6 +38,11 @@
       "title": "LangGraph AI 에세이 평가 루프",
       "description": "LangChain과 LangGraph를 활용하여 사용자가 입력한 주제에 대한 AI 에세이 작성, 피드백, 그리고 순환 보완 교정을 수행하는 완전한 동작형 워크플로우 학습 예제입니다.",
       "githubUrl": "https://github.com/sunjin12/Lang"
+    },
+    {
+      "title": "LanGraphNovel: 에이전트 협업 기반 장편 소설 집필 자동화 대시보드",
+      "githubUrl": "https://github.com/sunjin12/LanGraphNovel",
+      "description": "소설 기획, 세계관 구성, 캐릭터 설계, 집필 및 편집(교정/윤문)에 이르는 창작의 모든 과정을 에이전트 간의 유기적인 피드백 루프로 자동화하고, 사용자가 Streamlit 대시보드를 통해 이를 실시간으로 모니터링하고 개입할 수 있습니다."
     }
   ]
 }
