@@ -43,6 +43,11 @@
       "title": "LanGraphNovel: 에이전트 협업 기반 장편 소설 집필 자동화 대시보드",
       "githubUrl": "https://github.com/sunjin12/LanGraphNovel",
       "description": "소설 기획, 세계관 구성, 캐릭터 설계, 집필 및 편집(교정/윤문)에 이르는 창작의 모든 과정을 에이전트 간의 유기적인 피드백 루프로 자동화하고, 사용자가 Streamlit 대시보드를 통해 이를 실시간으로 모니터링하고 개입할 수 있습니다."
+    },
+    {
+      "title": "LoRA 감정 지원 챗봇 Fine-Tuning 실습 프로젝트",
+      "description": "Qwen2.5-1.5B-Instruct 소형 모델을 한국어 챗봇 데이터셋으로 QLoRA 파인튜닝하고 그 전후의 공감 능력 변화를 검증한 프로젝트입니다.",
+      "githubUrl": "https://github.com/sunjin12/LoRAFineTuning"
     }
   ]
 }
