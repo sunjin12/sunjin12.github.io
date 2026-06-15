@@ -10,13 +10,22 @@ async function fetchReadme(githubUrl: string): Promise<string | null> {
     const match = githubUrl.match(/github\.com\/([^/]+\/[^/]+)/);
     if (!match) return null;
     const ownerRepo = match[1];
-    const rawUrl = `https://raw.githubusercontent.com/${ownerRepo}/main/README.md`;
-    const res = await fetch(rawUrl);
+    
+    let branch = 'main';
+    let rawUrl = `https://raw.githubusercontent.com/${ownerRepo}/${branch}/README.md`;
+    let res = await fetch(rawUrl);
+    
+    if (!res.ok) {
+      branch = 'master';
+      rawUrl = `https://raw.githubusercontent.com/${ownerRepo}/${branch}/README.md`;
+      res = await fetch(rawUrl);
+    }
+    
     if (!res.ok) return null;
     let md = await res.text();
     // 상대 이미지 경로를 GitHub 절대 경로로 변환
     md = md.replace(/!\[([^\]]*)\]\((?!https?:\/\/)([^)]+)\)/g,
-      `![$1](https://raw.githubusercontent.com/${ownerRepo}/main/$2)`);
+      `![$1](https://raw.githubusercontent.com/${ownerRepo}/${branch}/$2)`);
     return marked.parse(md) as string;
   } catch {
     return null;
