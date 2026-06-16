@@ -48,6 +48,11 @@
       "title": "LoRA 감정 지원 챗봇 Fine-Tuning 실습 프로젝트",
       "description": "Qwen2.5-1.5B-Instruct 소형 모델을 한국어 챗봇 데이터셋으로 QLoRA 파인튜닝하고 그 전후의 공감 능력 변화를 검증한 프로젝트입니다.",
       "githubUrl": "https://github.com/sunjin12/LoRAFineTuning"
+    },
+    {
+      "title": "OpenClaw:Slack & Notion 기반 일과 관리 에이전트",
+      "description": "Slack 채널의 대화를 수집하고, Notion 일기를 읽어서 정리하는 지능형 일과 관리 보조 도구입니다.",
+      "githubUrl": "https://github.com/sunjin12/OpenclawTutorial"
     }
   ]
 }
