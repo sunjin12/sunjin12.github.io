@@ -53,6 +53,11 @@
       "title": "OpenClaw:Slack & Notion 기반 일과 관리 에이전트",
       "description": "Slack 채널의 대화를 수집하고, Notion 일기를 읽어서 정리하는 지능형 일과 관리 보조 도구입니다.",
       "githubUrl": "https://github.com/sunjin12/OpenclawTutorial"
+    },
+    {
+      "title": "설비 고장 예측 및 앙상블 모델 비교 분석 프로젝트",
+      "description": "본 프로젝트는 제조업 스마트팩토리 도메인에서 수집되는 센서 데이터를 활용하여 설비의 고장 여부를 사전에 예측하는 주피터 노트북 프로젝트입니다.",
+      "githubUrl": "https://github.com/sunjin12/Predictive-Maintenance"
     }
   ]
 }
