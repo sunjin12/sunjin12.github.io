@@ -58,6 +58,11 @@
       "title": "설비 고장 예측 및 앙상블 모델 비교 분석 프로젝트",
       "description": "본 프로젝트는 제조업 스마트팩토리 도메인에서 수집되는 센서 데이터를 활용하여 설비의 고장 여부를 사전에 예측하는 주피터 노트북 프로젝트입니다.",
       "githubUrl": "https://github.com/sunjin12/Predictive-Maintenance"
+    },
+    {
+      "githubUrl": "https://github.com/sunjin12/RAGAS",
+      "description": "FastAPI 마크다운 가이드라인 문서를 탐색하여 RAGAS 평가용 질문-정답 데이터셋을 자동으로 생성하고 사람이 직접 정제 및 검수한 뒤 최종 RAG 성능 평가를 수행하는 통합 웹 대시보드 프로젝트입니다.",
+      "title": "RAGAS"
     }
   ]
 }
